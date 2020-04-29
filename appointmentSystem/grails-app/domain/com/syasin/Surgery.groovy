@@ -16,6 +16,18 @@ String description
 
 String openingTime
 
+static hasMany=[doctors:Doctor,receptionists:Receptionist,nurses:Nurse, patients:Patient]
+
+static belongsTo=[patients:Patient]
+
+String toString()
+
+{
+
+return name
+
+}
+
     static constraints = {
 
 name nullable:false, blank:false;

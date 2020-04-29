@@ -20,6 +20,20 @@ String doctorPhone
 
 String bio
 
+Surgery surgery;
+
+static hasMany=[prescriptions:Prescription, nurses:Nurse, patients:Patient, appointments:Appointment]
+
+static belongsTo=[nurses:Nurse]
+
+String toString()
+
+{
+
+return fullName
+
+}
+
     static constraints = {
 
 fullName nullable:false, blank:false;

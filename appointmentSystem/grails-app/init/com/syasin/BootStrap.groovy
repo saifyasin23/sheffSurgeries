@@ -44,7 +44,8 @@ doctorUsername: 'SarahM',
 doctorPassword:'secret222',
 doctorOffice: 'D-9888',
 doctorPhone: '01111777',
-bio: 'Lorem Ispsum').save()
+bio: 'Lorem Ispsum',
+surgery: surgery1 ).save()
 
 def doctor2 = new Doctor ( 
 fullName: 'Dr Saif Yasin',
@@ -55,7 +56,8 @@ doctorUsername: 'SaifY',
 doctorPassword:'secret222',
 doctorOffice: 'D-9887',
 doctorPhone: '01111778',
-bio: 'Lorem Ispsum').save()
+bio: 'Lorem Ispsum',
+surgery: surgery2 ).save()
 
 def doctor3 = new Doctor ( 
 fullName: 'Dr Tom Bob',
@@ -66,7 +68,8 @@ doctorUsername: 'TomB',
 doctorPassword:'secret222',
 doctorOffice: 'D-9886',
 doctorPhone: '01111779',
-bio: 'Lorem Ispsum').save()
+bio: 'Lorem Ispsum',
+surgery: surgery3 ).save()
 
 //Patients
 
@@ -104,21 +107,24 @@ recepName: 'Rob Kingston',
 recepEmail: 'r.kingston@email.com',     
 recepUsername: 'rking',
 recepPassword: 'secret2019',  
-recepPhone: '0114 222 4445' ).save()
+recepPhone: '0114 222 4445',
+surgery: surgery1 ).save()
 
 def receptionist2 = new Receptionist ( 
 recepName: 'Celia Mae',  
 recepEmail: 'c.mae@email.com',     
 recepUsername: 'cmae', 
 recepPassword: 'secret2019',  
-recepPhone: '0114 222 4445' ).save()
+recepPhone: '0114 222 4445',
+surgery: surgery2 ).save()
 
 def receptionist3 = new Receptionist ( 
 recepName: 'Roz Raz',  
 recepEmail: 'r.roz@email.com',     
 recepUsername: 'rroz', 
 recepPassword: 'secret2019',  
-recepPhone: '0114 222 4445' ).save()
+recepPhone: '0114 222 4445',
+surgery: surgery3 ).save()
 
 //Nurse
 
@@ -127,21 +133,24 @@ nurseName: 'Susan Peters',
 qualifications: 'Registered General Nurse', 
 nurseEmail: 's.peters@myemail.com',     
 nurseOffice: 'B-455',    
-nursePhone: '0114 222 4433').save()
+nursePhone: '0114 222 4433',
+surgery: surgery1 ).save()
 
 def nurse2 = new Nurse ( 
 nurseName: 'Black Widow',  
 qualifications: 'Registered Head Nurse', 
 nurseEmail: 'b.widow@myemail.com',     
 nurseOffice: 'B-453',    
-nursePhone: '0114 222 4433').save()
+nursePhone: '0114 222 4433',
+surgery: surgery2 ).save()
 
 def nurse3 = new Nurse ( 
 nurseName: 'Tony Stark',  
 qualifications: 'Registered Head Nurse', 
 nurseEmail: 't.stark@myemail.com',     
 nurseOffice: 'B-457',    
-nursePhone: '0114 222 4433').save()
+nursePhone: '0114 222 4433',
+surgery: surgery3 ).save()
 
 //Appointments
 
@@ -149,19 +158,28 @@ def appointment1 = new Appointment (
 appDate: new Date('25/03/2019'),     
 appTime: '9:00',      
 appDuration: '45',  
-roomNumber: '1500').save()
+roomNumber: '1500',
+patient: patient1,
+doctor: doctor1, 
+surgery: surgery1).save()
 
 def appointment2 = new Appointment ( 
 appDate: new Date('31/03/2019'),     
 appTime: '16:00',      
 appDuration: '30',  
-roomNumber: '1111').save()
+roomNumber: '1111',
+patient: patient2,
+doctor: doctor2, 
+surgery: surgery2).save()
 
 def appointment3 = new Appointment ( 
 appDate: new Date('04/04/2019'),     
 appTime: '15:00',      
 appDuration: '60',  
-roomNumber: '3355').save()
+roomNumber: '3355',
+patient: patient3,
+doctor: doctor3, 
+surgery: surgery3).save()
 
 //Prescription
 
@@ -171,7 +189,9 @@ prescripNumber: '56788',
 medicine: 'Paracetomol',                 
 totalCost: '5.90',                
 dateIssued: new Date('25/05/2019'),
-patientPaying: "Yes" ).save()
+patientPaying: "Yes",
+doctor: doctor1, 
+patient: patient1).save()
 
 def prescription2 = new Prescription ( 
 pharmacyName: 'City Centre Pharmacy',         
@@ -179,7 +199,9 @@ prescripNumber: '56780',
 medicine: 'Ibuprofen',                 
 totalCost: '6.55',                
 dateIssued: new Date('20/05/2019'),
-patientPaying: "No" ).save()
+patientPaying: "No",
+doctor: doctor2, 
+patient: patient2).save()
 
 def prescription3 = new Prescription ( 
 pharmacyName: 'City Centre Pharmacy',         
@@ -187,7 +209,9 @@ prescripNumber: '56785',
 medicine: 'Co codamol',                 
 totalCost: '9.99',                
 dateIssued: new Date('23/05/2019'),
-patientPaying: "Yes" ).save()
+patientPaying: "Yes",
+doctor: doctor3, 
+patient: patient3).save()
 
     }
     def destroy = {

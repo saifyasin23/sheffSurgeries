@@ -14,6 +14,18 @@ Date dateIssued
 
 String patientPaying
 
+Doctor doctor;
+
+Patient patient;
+
+String toString()
+
+{
+
+return prescripNumber
+
+}
+
     static constraints = {
 
 pharmacyName nullable:false, blank:false;

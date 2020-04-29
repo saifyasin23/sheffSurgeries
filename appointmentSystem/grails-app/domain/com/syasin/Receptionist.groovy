@@ -12,6 +12,16 @@ String recepPassword
 
 String recepPhone
 
+Surgery surgery
+
+String toString()
+
+{
+
+return recepName
+
+}
+
     static constraints = {
 
 recepName nullable:false, blank:false;
