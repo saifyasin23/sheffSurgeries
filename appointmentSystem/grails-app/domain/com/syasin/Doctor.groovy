@@ -24,7 +24,7 @@ Surgery surgery;
 
 static hasMany=[prescriptions:Prescription, nurses:Nurse, patients:Patient, appointments:Appointment]
 
-static belongsTo=[nurses:Nurse]
+static belongsTo=[nurses:Nurse, patients:Patient]
 
 String toString()
 

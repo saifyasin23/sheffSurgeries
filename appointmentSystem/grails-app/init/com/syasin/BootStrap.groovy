@@ -2,7 +2,7 @@ package com.syasin
 
 class BootStrap {
 
-  def init = { servletContext ->
+  /* def init = { servletContext ->
 
 //Surgery
 
@@ -211,9 +211,9 @@ totalCost: '9.99',
 dateIssued: new Date('23/05/2019'),
 patientPaying: "Yes",
 doctor: doctor3, 
-patient: patient3).save()
+patient: patient3).save() 
 
-    }
+    } */
     def destroy = {
     }
 }
