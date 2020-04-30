@@ -18,6 +18,7 @@
 
 <g:layoutBody/>
 
+<g:loginToggle />
 
 <asset:javascript src="application.js"/>
 
